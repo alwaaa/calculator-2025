@@ -6,6 +6,14 @@
     font-family : "Montserrat";
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100dvh;
+}
+
 #container {
     background-color: rgb(114, 188, 252);
     height: 590px;
