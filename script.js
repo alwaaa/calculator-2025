@@ -34,6 +34,12 @@ const handleFirstNumber = (event) => {
     } else if (button.classList.contains("calculate")) {
         result = calculate();
         displayValue.value = result;
+    } else if (button.classList.contains("clear")) {
+        firstNumber = "";
+        secondNumber = "";
+        operator = "";
+        currentInput = "";
+        displayValue.value = "";
     }
 }
 
