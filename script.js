@@ -11,11 +11,6 @@ let operator = "";
 let currentInput = "";
 let result;
 
-const add = (a, b) => a + b;
-const subtract = (a, b) => a - b;
-const multiply = (a, b) => a * b;
-const divide = (a, b) => a / b;
-
 const handleFirstNumber = (event) => {
     const button = event.target;
     if (button.classList.contains("number") && (!operator)) {
