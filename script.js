@@ -11,6 +11,13 @@ let operator = "";
 let currentInput = "";
 let result;
 
+let operatorMap = {
+    "+": (firstNumber,secondNumber) => Number(firstNumber) + Number(secondNumber),
+    "-": (firstNumber,secondNumber) => Number(firstNumber) - Number(secondNumber),
+    "X": (firstNumber,secondNumber) => Number(firstNumber) * Number(secondNumber),
+    "/": (firstNumber,secondNumber) => Number(firstNumber) / Number(secondNumber),
+}
+
 const handleFirstNumber = (event) => {
     const button = event.target;
     if (button.classList.contains("number") && (!operator)) {
@@ -47,7 +54,11 @@ const calculate = () => {
             result = Number(firstNumber) - Number(secondNumber);
             break;
         case "/":
-            result = Number(firstNumber) / Number(secondNumber);
+            if (secondNumber > 0) {
+                result = Number(firstNumber) / Number(secondNumber);
+            } else {
+                result = "LMAO";
+            }
             break;
         case "X":
             result = Number(firstNumber) * Number(secondNumber);
