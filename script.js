@@ -36,6 +36,7 @@ const handleFirstNumber = (event) => {
     } else if (button.classList.contains("calculate")) {
         result = calculate();
         displayValue.value = result;
+        newCalc();
     } else if (button.classList.contains("clear")) {
         clearNumAndOps();
     }
@@ -67,6 +68,12 @@ buttons.forEach(button => {
     button.addEventListener("click", handleFirstNumber);
 })
 
+const newCalc = () => {
+    firstNumber = "";
+    secondNumber = "";
+    operator = "";
+    currentInput = "";
+}
 
 const clearNumAndOps = () => {
         firstNumber = "";
