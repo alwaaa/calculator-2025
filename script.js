@@ -37,11 +37,7 @@ const handleFirstNumber = (event) => {
         result = calculate();
         displayValue.value = result;
     } else if (button.classList.contains("clear")) {
-        firstNumber = "";
-        secondNumber = "";
-        operator = "";
-        currentInput = "";
-        displayValue.value = "";
+        clearNumAndOps();
     }
 }
 
@@ -71,6 +67,14 @@ buttons.forEach(button => {
     button.addEventListener("click", handleFirstNumber);
 })
 
+
+const clearNumAndOps = () => {
+        firstNumber = "";
+        secondNumber = "";
+        operator = "";
+        currentInput = "";
+        displayValue.value = "";
+}
 
 
 
