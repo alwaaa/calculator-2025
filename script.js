@@ -52,7 +52,7 @@ const calculate = () => {
             break;
         case "/":
             if (secondNumber > 0) {
-                result = Number(firstNumber) / Number(secondNumber);
+                result = (Number(firstNumber) / Number(secondNumber)).toFixed(7);
             } else {
                 result = "LMAO";
             }
